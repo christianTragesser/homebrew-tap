@@ -38,6 +38,10 @@ class Dispatch < Formula
     end
   end
 
+  def post_install
+    system "ln -s #{bin}/dispatch-* /usr/local/bin/dispatch"
+  end
+
   test do
     system "#{bin}/dispatch version"
   end
