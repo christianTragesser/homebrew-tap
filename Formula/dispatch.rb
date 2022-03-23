@@ -10,7 +10,7 @@ class Dispatch < Formula
 
   on_macos do
     url "https://github.com/christianTragesser/dispatch/releases/download/v0.1.2/dispatch_0.1.2_darwin_amd64.tar.gz"
-    sha256 "c772d6e2a4897caad0b3b911e08298aff5cdce4b067eb8f65a9848afb7225014"
+    sha256 "fec49adc99f06dc9e279e9528045c74d8a18be8c8ae75c6e811e143850406fc6"
 
     def install
       bin.install "dispatch-darwin-amd64"
@@ -30,7 +30,7 @@ class Dispatch < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/christianTragesser/dispatch/releases/download/v0.1.2/dispatch_0.1.2_linux_amd64.tar.gz"
-      sha256 "f04e9268a563405b025575e6a5491c9ea08070dd754a763cab378bbc04a64f12"
+      sha256 "f8c06c8ac74684d58453721c7da6f5251ab4b2cd6b430293c59f1c81a24781cc"
 
       def install
         bin.install "dispatch-linux-amd64"
