@@ -5,43 +5,43 @@
 class Dnsexit < Formula
   desc "A DNSExit dynamic ip address DNS client"
   homepage "https://github.com/christianTragesser/dnsexit-ip-update"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/christianTragesser/dnsexit-ip-update/releases/download/v0.2.0/dnsexit_0.2.0_darwin_arm64.tar.gz"
-      sha256 "2fe02b116099d4c5daae7aea3600d295c261f3ea2e7b4cb03e8be756daebcb6a"
-
-      def install
-        bin.install "dnsexit-darwin-arm64"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/christianTragesser/dnsexit-ip-update/releases/download/v0.2.0/dnsexit_0.2.0_darwin_amd64.tar.gz"
-      sha256 "17253583a4b5e99348f02cdaffc3956476e4eaecd4f2c58e742564bc3c82b41a"
+      url "https://github.com/christianTragesser/dnsexit-ip-update/releases/download/v0.2.1/dnsexit_0.2.1_darwin_amd64.tar.gz"
+      sha256 "8271aef096a5e1a2b7013af08f8c6f3d1286e0b2b819d989998b843abe15edba"
 
       def install
         bin.install "dnsexit-darwin-amd64"
       end
     end
+    if Hardware::CPU.arm?
+      url "https://github.com/christianTragesser/dnsexit-ip-update/releases/download/v0.2.1/dnsexit_0.2.1_darwin_arm64.tar.gz"
+      sha256 "a34aa3c4948f279d886b324833faa82a40043cd60d2e71876c9da93cd9ea0136"
+
+      def install
+        bin.install "dnsexit-darwin-arm64"
+      end
+    end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/christianTragesser/dnsexit-ip-update/releases/download/v0.2.0/dnsexit_0.2.0_linux_amd64.tar.gz"
-      sha256 "d53f658d0d81889db07a9ba6f7eb8825b31a44143b54ef9830598f0487479544"
-
-      def install
-        bin.install "dnsexit-linux-amd64"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/christianTragesser/dnsexit-ip-update/releases/download/v0.2.0/dnsexit_0.2.0_linux_arm64.tar.gz"
-      sha256 "a705351959d73ffd9591555878ee5720e58415fcf8c9647e74f64a3589f333a4"
+      url "https://github.com/christianTragesser/dnsexit-ip-update/releases/download/v0.2.1/dnsexit_0.2.1_linux_arm64.tar.gz"
+      sha256 "62d41227640d056eccaffa725ca6835384e107792a146aa37372afab326a40ee"
 
       def install
         bin.install "dnsexit-linux-arm64"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/christianTragesser/dnsexit-ip-update/releases/download/v0.2.1/dnsexit_0.2.1_linux_amd64.tar.gz"
+      sha256 "669b6a57a80b673a154ce202314c6aa5bbe9dc8a26af3f66acfa8a795285fdde"
+
+      def install
+        bin.install "dnsexit-linux-amd64"
       end
     end
   end
