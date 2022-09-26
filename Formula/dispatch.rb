@@ -5,12 +5,12 @@
 class Dispatch < Formula
   desc "A CLI utility for deploying kOps Kubernetes in AWS"
   homepage "https://github.com/christianTragesser/dispatch"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
-    url "https://github.com/christianTragesser/dispatch/releases/download/v0.1.4/dispatch_0.1.4_darwin_amd64.tar.gz"
-    sha256 "77c85508b5e4af85cdf3784d50062add2fb3e539c12dfe0642539a0075588fdd"
+    url "https://github.com/christianTragesser/dispatch/releases/download/v0.1.5/dispatch_0.1.5_darwin_amd64.tar.gz"
+    sha256 "584626d0a956d7468ed9807ef659115e59e523eba23e3e86d7810c105a063911"
 
     def install
       bin.install "dispatch-darwin-amd64"
@@ -29,8 +29,8 @@ class Dispatch < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/christianTragesser/dispatch/releases/download/v0.1.4/dispatch_0.1.4_linux_amd64.tar.gz"
-      sha256 "a271d3201024c1aa419e88484891e484508e5ef65b723fa40bef40e6dc0b5e8d"
+      url "https://github.com/christianTragesser/dispatch/releases/download/v0.1.5/dispatch_0.1.5_linux_amd64.tar.gz"
+      sha256 "d6a6199a53f5da4dd283ce0da17674879e1eec004d8fc9a1a66288b9dd4d2772"
 
       def install
         bin.install "dispatch-linux-amd64"
